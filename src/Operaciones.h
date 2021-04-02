@@ -9,6 +9,8 @@
 #define OPERACIONES_H_
 #include <stdio.h>
 
+int PedirEntero(char mensajeError[], int minimo, int maximo);
+float PedirFlotante(char mensaje[]);
 float Sumar(float,float);
 float Restar(float,float);
 float Dividir(float,float);

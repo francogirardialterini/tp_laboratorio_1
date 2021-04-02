@@ -6,6 +6,28 @@
  */
 #include "Operaciones.h"
 
+
+int PedirEntero(char mensajeError[], int minimo, int maximo)
+{
+	int numeroIngresado;
+	scanf("%d",&numeroIngresado);
+	while (numeroIngresado<minimo || numeroIngresado>maximo)
+	{
+		printf("\n %s", mensajeError);
+		scanf("%d",&numeroIngresado);
+	}
+	return numeroIngresado;
+}
+
+float PedirFlotante(char mensaje[])
+{
+	float numeroIngresado;
+	printf(mensaje);
+	scanf("%f",&numeroIngresado);
+	return numeroIngresado;
+}
+
+
 float Sumar(float numeroUno,float numeroDos)
 {	float suma;
 	suma= numeroUno + numeroDos;
@@ -29,7 +51,16 @@ float Dividir(float numeroUno,float numeroDos)
 float Multiplicar(float numeroUno,float numeroDos)
 {
 	float multiplicacion;
-	multiplicacion= numeroUno * numeroDos;
+
+	if(numeroUno==0 || numeroDos==0)
+	{
+		multiplicacion=0;
+	}
+	else
+	{
+		multiplicacion= numeroUno * numeroDos;
+	}
+
 	return multiplicacion;
 }
 
@@ -37,9 +68,12 @@ unsigned long int Factorial(float numero)
 {	unsigned long int acumuladorFactorial;
 	int i;
 	acumuladorFactorial=1;
-	for(i=numero;i>1;i--)
+	if(numero>0)
 	{
-		acumuladorFactorial= Multiplicar(acumuladorFactorial,i);
+		for(i=numero;i>1;i--)
+		{
+			acumuladorFactorial= Multiplicar(acumuladorFactorial,i);
+		}
 	}
 	return acumuladorFactorial;
 }
