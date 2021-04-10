@@ -13,10 +13,14 @@ Trabajo Practico N° 1
 
 int main(void)
 {
-	char pregunta;
+
 	int opcion;
 	float operandoA;
+	int enteroA;
 	float operandoB;
+	int enteroB;
+	float restaOperandoAEnteroA;
+	float restaOperandoBEnteroB;
 	float sumaOperando;
 	float restaOperando;
 	float divisionOperando;
@@ -31,7 +35,11 @@ int main(void)
 	banderaOperandoA=0;
 	banderaCalculandoOperanciones=0;
 
+
+	printf("Bienvenido\n");
 	do {
+		system("color 9");
+
 		printf("Escoja una de las opciones del N°1 al 5\n");
 		if(banderaOperandoA==0)
 		{
@@ -93,6 +101,11 @@ int main(void)
 						}
 
 					multiplicarOperando= Multiplicar(operandoA, operandoB);
+
+					enteroA=operandoA;
+					enteroB=operandoB;
+					restaOperandoAEnteroA=operandoA-enteroA;
+					restaOperandoBEnteroB=operandoB-enteroB;
 					if(operandoA>-1)
 					{
 						factorialOperandoA=Factorial(operandoA);
@@ -110,7 +123,7 @@ int main(void)
 				break;
 			case 4:
 				if(banderaCalculandoOperanciones==1)
-				{
+				{	system("color 2f");
 					printf("4. Los resultados son: \n");
 					printf("a) La suma de (%.2f+%.2f) es: %.2f \n", operandoA, operandoB, sumaOperando);
 					printf("b) La resta de (%.2f-%.2f) es: %.2f \n", operandoA, operandoB, restaOperando);
@@ -126,32 +139,33 @@ int main(void)
 
 					printf("d) La multiplicacion de (%.2f*%.2f) es: %.2f\n",operandoA, operandoB, multiplicarOperando);
 
-					if(operandoA>-1)
+					if(operandoA>-1&&restaOperandoAEnteroA==0)
 					{
 						printf("e) El factorial del %.2f es: %.2ld \n",operandoA, factorialOperandoA);
 					}
 					else
 					{
-						printf("No se puede calcular el factorial de un N° negativo\n");
+						printf("No se puede calcular el factorial de un N° negativo O de un N° que no es entero\n");
 					}
 
-					if(operandoB>-1)
+					if(operandoB>-1&&restaOperandoBEnteroB==0)
 					{
 						printf("e) El factorial del %.2f es: %.2ld \n",operandoB, factorialOperandoB);
 					}
 					else
 					{
-						printf("No se puede calcular el factorial de un N° negativo\n");
+						printf("No se puede calcular el factorial de un N° negativo O de un N° que no es entero\n");
 					}
 				}
 				else
 				{
 					printf("Primero ingrese las opciones 1, 2 y 3 para calcular las operaciones \n");
 				}
-
+				system("pause");
+				system("cls");
 				break;
 			case 5:
-
+				system("color 4f");
 				printf("Usted esta saliendo.!!! \n");
 				break;
 		}
