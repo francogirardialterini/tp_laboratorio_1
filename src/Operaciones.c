@@ -78,4 +78,69 @@ unsigned long int Factorial(float numero)
 	return acumuladorFactorial;
 }
 
+void MostrarMensajes(char mensajeUno[], char mensajeDos[], char mensajeTres[])
+{
+	printf("%s \n", mensajeUno);
+	printf("%s \n", mensajeDos);
+	printf("%s \n", mensajeTres);
+}
+
+void MostrarMensaje(char mensajeUno[])
+{
+	printf("%s \n", mensajeUno);
+}
+
+void MostarOperacionesMatematicas(float operandoA, float operandoB,float sumaOperando, float restaOperando, float divisionOperando,
+		float multiplicarOperando, int enteroA, int enteroB, float restaOperandoAEnteroA, float restaOperandoBEnteroB,
+		unsigned long int factorialOperandoA, unsigned long int factorialOperandoB)
+{
+	printf("4. Los resultados son: \n");
+	printf("a) La suma de (%.2f+%.2f) es: %.2f \n", operandoA, operandoB, sumaOperando);
+	printf("b) La resta de (%.2f-%.2f) es: %.2f \n", operandoA, operandoB, restaOperando);
+	if(operandoB!=0)
+	{
+		printf("c) La division entre (%.2f/%.2f) es: %.2f \n",operandoA, operandoB, divisionOperando);
+	}
+	else
+	{
+		printf("No se puede dividir por 0\n");
+	}
+
+	printf("d) La multiplicacion de (%.2f*%.2f) es: %.2f\n",operandoA, operandoB, multiplicarOperando);
+	if(operandoA>-1&&restaOperandoAEnteroA==0)
+	{
+		printf("e) El factorial del %.2f es: %.2ld \n",operandoA, factorialOperandoA);
+	}
+	else
+	{
+		printf("No se puede calcular el factorial de un N° negativo O de un N° que no es entero\n");
+	}
+
+	if(operandoB>-1&&restaOperandoBEnteroB==0)
+	{
+		printf("e) El factorial del %.2f es: %.2ld \n",operandoB, factorialOperandoB);
+	}
+	else
+	{
+		printf("No se puede calcular el factorial de un N° negativo O de un N° que no es entero\n");
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
