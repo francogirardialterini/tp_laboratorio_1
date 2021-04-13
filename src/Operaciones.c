@@ -90,9 +90,10 @@ void MostrarMensaje(char mensajeUno[])
 	printf("%s \n", mensajeUno);
 }
 
+
 void MostarOperacionesMatematicas(float operandoA, float operandoB,float sumaOperando, float restaOperando, float divisionOperando,
 		float multiplicarOperando, int enteroA, int enteroB, float restaOperandoAEnteroA, float restaOperandoBEnteroB,
-		unsigned long int factorialOperandoA, unsigned long int factorialOperandoB)
+		unsigned long int factorialOperandoA, unsigned long  int factorialOperandoB)
 {
 	printf("4. Los resultados son: \n");
 	printf("a) La suma de (%.2f+%.2f) es: %.2f \n", operandoA, operandoB, sumaOperando);
@@ -113,7 +114,7 @@ void MostarOperacionesMatematicas(float operandoA, float operandoB,float sumaOpe
 	}
 	else
 	{
-		printf("No se puede calcular el factorial de un N° negativo O de un N° que no es entero\n");
+		printf("No se puede calcular el factorial de un Nro negativo O de un Nro que no es entero\n");
 	}
 
 	if(operandoB>-1&&restaOperandoBEnteroB==0)
@@ -122,7 +123,7 @@ void MostarOperacionesMatematicas(float operandoA, float operandoB,float sumaOpe
 	}
 	else
 	{
-		printf("No se puede calcular el factorial de un N° negativo O de un N° que no es entero\n");
+		printf("No se puede calcular el factorial de un Nro negativo O de un Nro que no es entero\n");
 	}
 
 }

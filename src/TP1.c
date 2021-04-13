@@ -42,7 +42,7 @@ int main(void)
 	printf("Bienvenido usuario\n");
 	do {
 		system("color 9");
-		MostrarMensaje("Escoja una de las opciones del N°1 al 5");
+		MostrarMensaje("Escoja una de las opciones del Nro 1 al 5");
 
 		if(banderaOperandoA==0)
 		{
@@ -52,19 +52,15 @@ int main(void)
 		{
 			printf("Se ingreso el 1er operando y es (A=%.2f) \n", operandoA);
 		}
-
 		if(banderaOperandoB==0)
 		{
 			MostrarMensaje("2. Ingresar 2do operando (B=y)");
 		}
 		else
 		{
-
 			printf("2. El 2do operando es (B=%.2f)\n",operandoB);
 		}
-
 		MostrarMensajes("3. Calcular todas las operaciones", "4. Informar resultados", "5. Salir");
-
 		opcion=PedirEntero("Error,Ingrese una opcion del 1 al 5", 1, 5);
 		system("cls");
  		switch (opcion)
@@ -80,13 +76,13 @@ int main(void)
 				system("cls");
 				break;
 			case 3:
-
 				if(banderaOperandoA==1&&banderaOperandoB==1)
 				{
 					banderaCalculandoOperanciones=1;
+					banderaOperandoA=0;
+					banderaOperandoB=0;
 					MostrarMensaje("3. Calculando todas las operaciones, ingrese 4 para ver los resultados");
-
-					sumaOperando= Sumar(operandoA, operandoB);
+					sumaOperando=Sumar(operandoA, operandoB);
 					restaOperando=Restar(operandoA, operandoB);
 					if(operandoB!=0)
 						{
@@ -110,14 +106,13 @@ int main(void)
 				{
 					MostrarMensaje("3. Ingrese las opciones 1 y 2 para poder realizar los calculos");
 				}
-
 				break;
 			case 4:
 				if(banderaCalculandoOperanciones==1)
 				{	system("color 2f");
-
 					MostarOperacionesMatematicas(operandoA, operandoB, sumaOperando, restaOperando, divisionOperando, multiplicarOperando, enteroA, enteroB,
 												restaOperandoAEnteroA, restaOperandoBEnteroB, factorialOperandoA, factorialOperandoB);
+					banderaCalculandoOperanciones=0;
 				}
 				else
 				{

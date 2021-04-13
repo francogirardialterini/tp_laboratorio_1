@@ -16,7 +16,7 @@
  * @fn int PedirEntero(char[], int, int)
  * @brief Funcion que pide un N° entero, utilizando 3 parámetros.
  *
- * @param mensajeError array char para mostrar el mensaje de error en el caso que no se cumplan los parámetros de validación.
+ * @param mensajeError array char que muestra el mensaje de error en el caso que no se cumplan los parámetros de validación.
  * @param minimo Entero que valida el minimo ingresado.
  * @param maximo Entero que valida el maximo ingresado.
  * @return
@@ -118,5 +118,7 @@ void MostrarMensaje(char mensajeUno[]);
  */
 void MostarOperacionesMatematicas(float operandoA, float operandoB,float sumaOperando, float restaOperando, float divisionOperando, float multiplicarOperando,
 		int enteroA, int enteroB, float restaOperandoAEnteroA, float restaOperandoBEnteroB, unsigned long int factorialOperandoA, unsigned long int factorialOperandoB);
+
+
 
 #endif /* OPERACIONES_H_ */
