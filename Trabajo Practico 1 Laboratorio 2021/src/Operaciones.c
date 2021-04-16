@@ -108,22 +108,24 @@ void MostarOperacionesMatematicas(float operandoA, float operandoB,float sumaOpe
 	}
 
 	printf("d) La multiplicacion de (%.2f*%.2f) es: %.2f\n",operandoA, operandoB, multiplicarOperando);
-	if(operandoA>-1&&restaOperandoAEnteroA==0)
+
+	if(operandoA>-1&&restaOperandoAEnteroA==0&&operandoA<17)
 	{
 		printf("e) El factorial del %.2f es: %.2ld \n",operandoA, factorialOperandoA);
 	}
 	else
 	{
-		printf("No se puede calcular el factorial de un Nro negativo O de un Nro que no es entero\n");
+		printf("No se puede calcular el factorial de: un Nro negativo o de un Nro que no es entero y en esta calculadora a un Nro mayor a 16\n");
 	}
 
-	if(operandoB>-1&&restaOperandoBEnteroB==0)
+	if(operandoB>-1&&restaOperandoBEnteroB==0&&operandoB<17)
 	{
-		printf("e) El factorial del %.2f es: %.2ld \n",operandoB, factorialOperandoB);
+
+			printf("e) El factorial del %.2f es: %.2ld \n",operandoB, factorialOperandoB);
 	}
 	else
 	{
-		printf("No se puede calcular el factorial de un Nro negativo O de un Nro que no es entero\n");
+			printf("No se puede calcular el factorial de un Nro negativo o de un Nro que no es entero y en esta calculadora a un Nro mayor a 16\n");
 	}
 
 }
